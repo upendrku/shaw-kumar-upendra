@@ -1,37 +1,19 @@
-import React, { useState } from 'react'
-import { useTrail, a } from '@react-spring/web'
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Intro from './Intro';
+import NavigationBar from './NavigationBar';
 
-import styles from '../styles.module.css'
-
-const Trail = ({ open, children }) => {
-    const items = React.Children.toArray(children)
-    const trail = useTrail(items.length, {
-        config: { mass: 5, tension: 2000, friction: 200 },
-        opacity: open ? 1 : 0,
-        x: open ? 0 : 20,
-        height: open ? 150 : 0,
-        from: { opacity: 0, x: 20, height: 0 },
-    })
+const App = () => {
     return (
-        <div>
-            {trail.map(({ height, ...style }, index) => (
-                <a.div key={index} className={styles.trailsText} style={style}>
-                    <a.div style={{ height }}>{items[index]}</a.div>
-                </a.div>
-            ))}
-        </div>
-    )
-}
+        <>
+            <NavigationBar />
+            <Container>
+                <div className={'container'}>
+                    <Intro text={'Hi! I am Upendra Kumar'} />
+                </div>
+            </Container>
+        </>
+    );
+};
 
-export default function App() {
-    const [open, set] = useState(true)
-    return (
-        <div className={styles.container} onClick={() => set(state => !state)}>
-            <Trail open={open}>
-                <span>Hi!</span>
-                <span>I'm Upendra Kumar</span>
-                <span>I'm a full stack developer living in Buffalo.</span>
-            </Trail>
-        </div>
-    )
-}
+export default App
