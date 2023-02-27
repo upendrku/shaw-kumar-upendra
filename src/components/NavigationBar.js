@@ -7,11 +7,10 @@ const NavigationBar = ({ open, children }) => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                <Navbar.Brand href="#home">.U.K.</Navbar.Brand>
+                <Nav className="text-right">
+                    <Nav.Link href="#about">About Me</Nav.Link>
+                    <Nav.Link href="#contact">Contact</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>

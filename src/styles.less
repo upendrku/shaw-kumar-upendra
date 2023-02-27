@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@font-face {
+  font-family: 'customFont';
+  src: url('../public/fonts/HARMONY.woff2') format('woff2'),
+    url('../public/fonts/HARMONY.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 1000px) {
+  .helloLine {
+    margin-bottom: 10%;
+  }
+  .navbar-brand,
+  .navbar-nav {
+    font-size: 2rem;
+  }
+}
 
 html,
 body,
@@ -10,6 +26,9 @@ body,
 body {
   font-family: system-ui;
   margin: 0;
+  background-image: url('../public/clay-banks-unsplash.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 *,
@@ -20,17 +39,12 @@ body {
 
 /* Dashboard page css start*/
 
-body {
-  background: linear-gradient(
-    45deg,
-    hsl(272deg 75% 65%) 0%,
-    hsl(193deg 100% 50%) 50%,
-    hsl(162deg 84% 88%) 100%
-  );
-}
+// body {
+//   background: black;
+// }
 
 .App {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: customFont;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -41,7 +55,24 @@ body {
 
 h1 {
   color: white;
-  font-size: 48px;
+  font-size: 98px;
+  font-family: customFont;
+  margin-bottom: 15px;
+}
+
+h2,
+h3 {
+  color: white;
+  font-size: 28px;
+  font-family: customFont;
+}
+
+.helloLine {
+  // margin-top: 20%;
+}
+
+.downloadResumeSec {
+  margin-top: 70px;
 }
 
 button {
@@ -70,4 +101,19 @@ button > svg {
   margin-left: 10px;
 }
 
+.pagePadding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 100vh; //vh - viewport height
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-custom {
+  backdrop-filter: blur(1.875rem);
+  background-color: rgb(var(0, 0, 0) / 0.3);
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+}
 /* Dashboard page css end*/

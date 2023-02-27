@@ -7,9 +7,9 @@ const App = () => {
     return (
         <>
             <NavigationBar />
-            <Container>
-                <div className={'container'}>
-                    <Intro text={'Hi! I am Upendra Kumar'} />
+            <Container className='pagePadding'>
+                <div className='d-flex'>
+                    <Intro />
                 </div>
             </Container>
         </>
