@@ -61,7 +61,7 @@ const Intro = ({
                 <div className='downloadResumeSec'>
                     <motion.div initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 1.5 }}>
                         <Nav.Link href="/Upendra_Kumar_Resume.pdf" target="_blank">
-                            <a href="/Upendra_Kumar_Resume.pdf" target="_blank" >
+                            <a href="../../Upendra_Kumar_Resume.pdf" target="_blank" >
                                 Download Resume
                             </a></Nav.Link>
                     </motion.div>
